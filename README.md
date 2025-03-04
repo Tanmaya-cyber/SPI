@@ -17,8 +17,7 @@ these are different configurations for clk settings, which determine <ins> how <
 1. <ins>**CPOL**</ins>: <ins> C</ins>lock <ins>POL</ins>arity determines the idle state of the clk , when the SPI bus is not in use. There are 2 types/values of COPL i.e. 0 & 1.
 
 ![Screenshot-175](https://github.com/user-attachments/assets/8e9dfb34-b2cb-4563-b11e-d69755c46bdd)
-2. <ins>**CPHA**</ins>: <ins> C</ins>lock <ins>PHA</ins>se determines when data is sampled with respect to clock signal. There are 2 values of CPHA i.e. 0 & 1.
-
+2. <ins>**CPHA**</ins>: <ins> C</ins>lock <ins>PHA</ins>se determines when data is sampled with respect to clock signal. There are 2 values of CPHA i.e. 0 & 1 .
 -> in "0" = Data is sampled on the first edge of the clock cycle.
 Data must be stable before the clock transistion
 
