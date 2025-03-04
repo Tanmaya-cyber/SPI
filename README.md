@@ -14,6 +14,7 @@ CS/SS (Chip Select/Slave Select) – Active-low signal to select a specific slav
 
 ### Concept of Clock Polarity & Clock Phase and their infulence on SPI Modes
 these are different configurations for clk settings, which determine <ins> how </ins> and <ins> when </ins> data is transmitted and recieved.
+
 1. **CPOL**: Clock POLarity determines the idle state of the clk , when the SPI bus is not in use. There are 2 types/values of COPL i.e. 0 & 1.
 
 ![Screenshot-175](https://github.com/user-attachments/assets/8e9dfb34-b2cb-4563-b11e-d69755c46bdd)
