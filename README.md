@@ -53,13 +53,12 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
   
 ## How Does SPI Work?
 1. Clock:
-   -The clock signal synchronizes the output of data bits from the master to the sampling of bits by the slave.
-   1 bit of data is transferred in each clock cycle , so the speed of data transfer is determined by frequency of the clock signal. The Clock signal in SPI can be modified using the properties of CPOL & CPHA .
-3. Slave Select:
+   -The clock signal synchronizes the output of data bits from the master to the sampling of bits by the slave. 1 bit of data is transferred in each clock cycle , so the speed of data transfer is determined by frequency of the clock signal. The Clock signal in SPI can be modified using the properties of CPOL & CPHA .
+2. Slave Select:
+   - A slave chip becomes active 
+3. MOSI:
    -
-4. MOSI:
-   -
-6. MISO:
+4. MISO:
    -
 
 ## Block Diagram 
