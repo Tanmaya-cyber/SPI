@@ -17,13 +17,13 @@ SPI communication depends on two key parameters: Clock Polarity (CPOL) and Clock
 ------------------------------------------------------------------------
 |  Mode   |	CPOL	| CPHA	|  Clock |  Idle State      |	Data Sampling  |
 ------------------------------------------------------------------------
-|  0	    |  0	  |  0	  |  Low	 |  Leading Edge    |  (Rising)      |
+|    0   |  0	  |  0	  |  Low	 |  Leading Edge    |  (Rising)      |
 ------------------------------------------------------------------------
-|  1	    |  0	  |  1	  |  Low	 |  Trailing Edge   |  (Falling)     |
+|    1   |  0	  |  1	  |  Low	 |  Trailing Edge   |  (Falling)     |
 ------------------------------------------------------------------------
-|  2	    |  1	  |  0	  |  High	 |  Leading Edge    |  (Falling)     |
+|    2   |  1	  |  0	  |  High	 |  Leading Edge    |  (Falling)     |
 ------------------------------------------------------------------------
-|  3      |  1	  |  1	  |  High	 |  Trailing Edge   |  (Rising)      |
+|    3   |  1	  |  1	  |  High	 |  Trailing Edge   |  (Rising)      |
 ------------------------------------------------------------------------
 
 ## Objectives
