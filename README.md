@@ -10,7 +10,7 @@
 3. To verify the full-duplex communication i.e. correct data is transmitted and received.
 
 ## Block Diagram 
-!(https://github.com/Tanmaya-cyber/SPI/blob/main/block%20diagram.png)
+<src="https://github.com/Tanmaya-cyber/SPI/blob/main/block%20diagram.png">
 
 ## Details about the sub-blocks
 1. SPI CONTROL REGISTER 1
