@@ -43,6 +43,25 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
 2. To do waveform analysis and verify the feasibility of the state machine that we have designed.
 3. To verify the full-duplex communication i.e. correct data is transmitted and received.
 
+## Multi Slave - Configurations in SPI
+1. Independent Slave Configuration
+   - each slave has a dedicated CS line.
+   - the master activates <ins>only one slave at a time</ins> by pulling CS down.
+2. Daisy Chain Configuration
+   - slaves are connected in a chain, passing data through each device.
+   - MISO of one slave connects to MOSI of the next slave.
+  
+## How Does SPI Work?
+1. Clock:
+   -The clock signal synchronizes the output of data bits from the master to the sampling of bits by the slave.
+   1 bit of data is transferred in each clock cycle , so the speed of data transfer is determined by frequency of the clock signal. The Clock signal in SPI can be modified using the properties of CPOL & CPHA .
+3. Slave Select:
+   -
+4. MOSI:
+   -
+6. MISO:
+   -
+
 ## Block Diagram 
 ![block diagram](https://github.com/user-attachments/assets/e1f5e4b5-3b1c-4596-9d8f-720faa97b4ea)
 
