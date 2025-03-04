@@ -10,10 +10,11 @@
 3. To verify the full-duplex communication i.e. correct data is transmitted and received.
 
 ## Block Diagram 
-<src="https://github.com/Tanmaya-cyber/SPI/blob/main/block%20diagram.png">
+![block diagram](https://github.com/user-attachments/assets/e1f5e4b5-3b1c-4596-9d8f-720faa97b4ea)
 
 ## Details about the sub-blocks
 1. SPI CONTROL REGISTER 1
+
 2. SPI CONTROL REGISTER 2
 3. SPI STATUS REGISTER
 4. BAUD RATE GENERATOR
