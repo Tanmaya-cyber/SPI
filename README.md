@@ -70,14 +70,49 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
 
 ## Details about the sub-blocks
 1. SPI CONTROL REGISTER 1
+   - Stores configuration settings for SPI communication.
+   - Input: Software-configured values.
+   - Output: Controls different operational parameters.
+     
 2. SPI CONTROL REGISTER 2
+   - Provides additional configuration options and enables/disables SPI features.
+   - Input: Software-configured values.
+   - Output: Modifies SPI behavior based on settings.
+   - 
 3. SPI STATUS REGISTER
-4. BAUD RATE GENERATOR
-5. SPI DATA REGISTER
-6. SHIFTER
-7. PHASE + POLARITY CONTROL
-8. SLAVE CONTOL
-9. MASTER CONTROL
+   - Monitors the current status of SPI operations.
+   - Input: Data from SPI transactions.
+   - Output: Status flags indicating completion, errors, or ongoing transfers.
+     
+5. BAUD RATE GENERATOR
+   - Determines the clock frequency for SPI communication.
+   - Input: System clock, configuration settings.
+   - Output: Generates the SPI clock signal (SCK).
+    
+6. SPI DATA REGISTER
+   - Stores data to be transmitted and received via SPI.
+   - Input: Data from master or slave.
+   - Output: Data sent to the SPI bus.
+   - 
+8. SHIFTER
+- Handles serial data shifting between MOSI and MISO.
+- Input: Data from SPI Data Register.
+- Output: Serial output data bit by bit.
+  
+8. PHASE + POLARITY CONTROL
+- Configures the clock phase (CPHA) and clock polarity (CPOL) settings.
+- Input: Software-configured CPOL & CPHA values.
+- Output: Adjusts clock behavior for SPI communication.
+
+9. SLAVE CONTOL
+- Manages slave device selection and response.
+- Input: CS/SS signal from the master.
+- Output: Enables/disables SPI operation for the selected slave.
+  
+10. MASTER CONTROL
+- Governs SPI communication from the master side.
+- Input: Control register settings, SPI bus signals.
+- Output: Generates clock signals, initiates data transfers.
 
 ## Steps of Project implementation
 
