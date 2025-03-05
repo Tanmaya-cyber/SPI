@@ -17,11 +17,12 @@ These are different configurations for clk settings, which determine <ins>how</i
 
 3. **CPHA**: Clock PHAse determines when data is sampled with respect to clock signal. There are 2 values of CPHA i.e. 0 & 1 .
 
-      in "0" = Data is sampled on the first edge of the clock cycle.
+      - in "0" = Data is sampled on the first edge of the clock cycle.
       > Data must be stable before the clock transistion
       
-      in "1" = Data is sampled on the second edge of the clock cycle.
+      - in "1" = Data is sampled on the second edge of the clock cycle.
       > Data must be stable after the clock transistion
+      
 
 4. **SPI Modes**
 The table below shows the four SPI modes based on Clock Polarity (CPOL) and Clock Phase (CPHA):
