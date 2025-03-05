@@ -27,7 +27,7 @@ these are different configurations for clk settings, which determine <ins>how</i
       in "1" = Data is sampled on the second edge of the clock cycle.
       Data must be stable after the clock transistion
 
-3. 	SPI Modes
+3. **SPI Modes**
 The table below shows the four SPI modes based on Clock Polarity (CPOL) and Clock Phase (CPHA):
 
 | Mode | CPOL | CPHA | Clock Idle State | Data Sampling |
@@ -37,9 +37,10 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
 | 2    | 1    | 0    | High            | Leading Edge (Falling) |
 | 3    | 1    | 1    | High            | Trailing Edge (Rising) |
 
+![download](https://github.com/user-attachments/assets/14e27d31-f3b1-4cda-9321-6acbb44aa798)
 
 ## Objectives
-1.  To implement the logic using Verilog and therefore, establish the SPI communication between 2 FPGA boards.
+1. To implement the logic using Verilog and therefore, establish the SPI communication.
 2. To do waveform analysis and verify the feasibility of the state machine that we have designed.
 3. To verify the full-duplex communication i.e. correct data is transmitted and received.
 
@@ -55,11 +56,14 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
 1. Clock:
    -The clock signal synchronizes the output of data bits from the master to the sampling of bits by the slave. 1 bit of data is transferred in each clock cycle , so the speed of data transfer is determined by frequency of the clock signal. The Clock signal in SPI can be modified using the properties of CPOL & CPHA .
 2. Slave Select:
-   - A slave chip becomes active 
+   - A slave chip becomes active when cs = 0.
+   - in case of multiple chip select, either all are given parallel cs lines or are connected in daisy chaining method.
 3. MOSI:
-   -
-4. MISO:
-   -
+   -The master sends data to the slave bit by bit, in serial through the MOSI line.
+   -Data sent from the master to the slave is usually sent with the MSB first.
+5. MISO:
+   -The slave can also send data back to the master through the MISO line in serial.
+   -The data sent from the slave back to the master is usually sent with the LSB first.
 
 ## Block Diagram 
 ![block diagram](https://github.com/user-attachments/assets/e1f5e4b5-3b1c-4596-9d8f-720faa97b4ea)
