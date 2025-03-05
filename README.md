@@ -1,6 +1,3 @@
-# SPI
-
-
 ## Introduction 
 SPI (Serial Peripheral Interface) is a high-speed, synchronous serial communication protocol used for short-distance communication between microcontrollers and peripheral devices such as sensors, displays, memory modules, and more. It operates in a master-slave architecture, where a single master controls multiple slave devices.
 
@@ -16,7 +13,7 @@ CS/SS (Chip Select/Slave Select) – Active-low signal to select a specific slav
 These are different configurations for clk settings, which determine <ins>how</ins> and <ins>when</ins> data is transmitted and recieved.
 
 1. **CPOL**: Clock POLarity determines the idle state of the clk , when the SPI bus is not in use. There are 2 types/values of COPL i.e. 0 & 1.
-![download](https://github.com/user-attachments/assets/db171af1-e281-457f-8236-af0ac4e8412d)
+![cpol](https://github.com/user-attachments/assets/203b6229-e5c4-4e6e-8ffa-a171ba5f79b0)
 
 3. **CPHA**: Clock PHAse determines when data is sampled with respect to clock signal. There are 2 values of CPHA i.e. 0 & 1 .
 
@@ -29,12 +26,12 @@ These are different configurations for clk settings, which determine <ins>how</i
 4. **SPI Modes**
 The table below shows the four SPI modes based on Clock Polarity (CPOL) and Clock Phase (CPHA):
 
-| Mode | CPOL | CPHA | Clock Idle State | Data Sampling |
-|------|------|------|-----------------|--------------|
-| 0    | 0    | 0    | Low             | Leading Edge (Rising) |
-| 1    | 0    | 1    | Low             | Trailing Edge (Falling) |
-| 2    | 1    | 0    | High            | Leading Edge (Falling) |
-| 3    | 1    | 1    | High            | Trailing Edge (Rising) |
+                  | Mode | CPOL | CPHA | Clock Idle State | Data Sampling |
+                  |------|------|------|-----------------|--------------|
+                  | 0    | 0    | 0    | Low             | Leading Edge (Rising) |
+                  | 1    | 0    | 1    | Low             | Trailing Edge (Falling) |
+                  | 2    | 1    | 0    | High            | Leading Edge (Falling) |
+                  | 3    | 1    | 1    | High            | Trailing Edge (Rising) |
 
 <!--![download](https://github.com/user-attachments/assets/14e27d31-f3b1-4cda-9321-6acbb44aa798)
  ![spi-modes png-1230x0](https://github.com/user-attachments/assets/df7c01b1-60b0-4d96-a306-33e5c5c8d31b)  -->
