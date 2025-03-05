@@ -78,41 +78,63 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
    - Provides additional configuration options and enables/disables SPI features.
    - Input: Software-configured values.
    - Output: Modifies SPI behavior based on settings.
-   - 
+     
 3. SPI STATUS REGISTER
    - Monitors the current status of SPI operations.
    - Input: Data from SPI transactions.
    - Output: Status flags indicating completion, errors, or ongoing transfers.
      
-5. BAUD RATE GENERATOR
+4. BAUD RATE GENERATOR
    - Determines the clock frequency for SPI communication.
    - Input: System clock, configuration settings.
    - Output: Generates the SPI clock signal (SCK).
     
-6. SPI DATA REGISTER
+5. SPI DATA REGISTER
    - Stores data to be transmitted and received via SPI.
    - Input: Data from master or slave.
    - Output: Data sent to the SPI bus.
-   - 
-8. SHIFTER
-- Handles serial data shifting between MOSI and MISO.
-- Input: Data from SPI Data Register.
-- Output: Serial output data bit by bit.
+    
+6. SHIFTER
+   - Handles serial data shifting between MOSI and MISO.
+   - Input: Data from SPI Data Register.
+   - Output: Serial output data bit by bit.
   
-8. PHASE + POLARITY CONTROL
-- Configures the clock phase (CPHA) and clock polarity (CPOL) settings.
-- Input: Software-configured CPOL & CPHA values.
-- Output: Adjusts clock behavior for SPI communication.
+7. PHASE + POLARITY CONTROL
+   - Configures the clock phase (CPHA) and clock polarity (CPOL) settings.
+   - Input: Software-configured CPOL & CPHA values.
+   - Output: Adjusts clock behavior for SPI communication.
+  
+8. Master/Slave Control
+   - Function: Determines whether the SPI module operates as master or slave.
+   - Input: Control signals from microcontroller.
+   - Output: Control signals to SPI blocks for operation mode.
 
-9. SLAVE CONTOL
-- Manages slave device selection and response.
-- Input: CS/SS signal from the master.
-- Output: Enables/disables SPI operation for the selected slave.
+9. MASTER BLOCK
+   - Function: Controls SPI communication when operating in master mode.
+   - Input: Data to be transmitted, clock signals, control commands.
+   - Output: Serial clock (SCK), MOSI data, chip select (SS) signals to slaves.
+     
+10. SLAVE BLOCK
+   - Function: Receives data when operating in slave mode.
+   - Input: Clock (SCK), MOSI data from master, chip select (SS) signal.
+   - Output: MISO data back to master.
+   - 
+11. PORT CONTROL LOGIC
+   - Function: Manages MOSI, MISO, SCK, and SS lines.
+   - Input: Signals from master/slave control and data registers.
+   - Output: Signals to SPI pins for communication.
+
+11. INTERRUPT CONTROL (SPIF, SPTEF Flags)
+   - Function: Generates interrupts for data transmission/reception completion.
+   - Input: SPI operation status.
+   - Output: Interrupt request to microcontroller.
+
+12. MODE FAULT DETECTION MODF Flag
+   - Function: Detects errors like multiple masters trying to access the bus.
+   - Input: Conflict detection signals.
+   - Output: Error flag to status register.
   
-10. MASTER CONTROL
-- Governs SPI communication from the master side.
-- Input: Control register settings, SPI bus signals.
-- Output: Generates clock signals, initiates data transfers.
+
 
 ## Steps of Project implementation
 
