@@ -39,6 +39,8 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
 
 ![download](https://github.com/user-attachments/assets/14e27d31-f3b1-4cda-9321-6acbb44aa798)
 ![spi-modes png-1230x0](https://github.com/user-attachments/assets/df7c01b1-60b0-4d96-a306-33e5c5c8d31b)
+![Screenshot 2025-03-05 183442](https://github.com/user-attachments/assets/e4a89a37-5865-4dec-a94b-3479921d0092)
+
 
 ## Objectives
 1. To implement the logic using Verilog and therefore, establish the SPI communication.
