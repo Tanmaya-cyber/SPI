@@ -59,11 +59,11 @@ The table below shows the four SPI modes based on Clock Polarity (CPOL) and Cloc
    - A slave chip becomes active when cs = 0.
    - in case of multiple chip select, either all are given parallel cs lines or are connected in daisy chaining method.
 3. MOSI:
-   -The master sends data to the slave bit by bit, in serial through the MOSI line.
-   -Data sent from the master to the slave is usually sent with the MSB first.
+   - The master sends data to the slave bit by bit, in serial through the MOSI line.
+   - The data sent from the master to the slave is usually sent with the MSB first.
 5. MISO:
-   -The slave can also send data back to the master through the MISO line in serial.
-   -The data sent from the slave back to the master is usually sent with the LSB first.
+   - The slave can also send data back to the master through the MISO line in serial.
+   - The data sent from the slave back to the master is usually sent with the LSB first.
 
 ## Block Diagram 
 ![block diagram](https://github.com/user-attachments/assets/e1f5e4b5-3b1c-4596-9d8f-720faa97b4ea)
